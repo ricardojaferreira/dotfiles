@@ -1,0 +1,25 @@
+set showmode
+" mapleader
+let mapleader = ','
+nnoremap <leader>s :w<CR>
+
+" duplicate lines
+noremap <leader>d <ESC>Vyp
+inoremap <leader>d <ESC><ESC>Vypi
+
+" Select All
+noremap <leader>a <ESC><ESC>ggVG
+
+" Delete without cut 
+nnoremap <leader>x "_d
+
+" COPY
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
+" add quotes to word
+vnoremap q" di""<ESC>P
+vnoremap q' di''<ESC>P
+

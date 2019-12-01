@@ -1,0 +1,94 @@
+# Change prefix key to CTRL+A. "C-" stands for CTRL, "M-" stands for ALT key
+unbind-key C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+#Reload config file
+bind r source-file ~/.tmux.conf
+
+#Change window number
+#bind move-window -t
+
+#Don't rename windows automatically
+set-option -g allow-rename off
+
+# Allow mouse interaction
+set-option -g mouse on
+#set -g mouse-select-window on
+#set -g mouse-select-pane on
+#set -g mouse-resize-pane on
+
+# split panes
+bind e split-window -h -c "#{pane_current_path}"
+bind o split-window -c "#{pane_current_path}"
+unbind '"'
+unbind %
+
+
+# Set vim mode in copy
+setw -g mode-keys vi
+
+#start copy mode and then paste
+unbind [
+bind Escape copy-mode
+unbind p
+bind-key p paste-buffer
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-selection
+
+#Pane switching
+bind -n S-Right select-pane -R
+bind -n S-h select-pane -R
+bind -n S-Left select-pane -L
+bind -n S-l select-pane -L
+bind -n S-Up select-pane -U
+bind -n S-k select-pane -U
+bind -n S-Down select-pane -D
+bind -n S-j select-pane -D
+
+#Pane Resizing
+bind -n S-C-Left resize-pane -L
+bind -n S-C-l resize-pane -L
+bind -n S-C-h resize-pane -R
+bind -n S-C-Right resize-pane -R
+bind -n S-C-Down resize-pane -D
+bind -n S-C-j resize-pane -D
+bind -n S-C-Up resize-pane -U
+bind -n S-C-k resize-pane -U
+
+##############
+### DESIGN ###
+##############
+
+# loud or quiet?
+set-option -g visual-activity off
+set-option -g visual-bell off
+set-option -g visual-silence off
+set-window-option -g monitor-activity off
+set-option -g bell-action none
+
+#  modes
+setw -g clock-mode-colour colour5
+# setw -g mode-attr bold
+# setw -g mode-fg colour1
+# setw -g mode-bg colour18
+
+#  statusbar
+set -g status-position bottom
+set -g status-justify left
+set -g status-bg colour19
+set -g status-fg colour233
+# set -g status-attr dim
+set -g status-left ''
+# set -g status-right '#[fg=colour233,bg=colour19,bold] %d/%m/%Y - %H:%M '
+set -g status-right-length 150
+set -g status-left-length 70
+
+# tm_tunes="#[bg=colour5,fg=cour19] ♫ #(osascript -l JavaScript ~/.dotfiles/applescripts/tunes.js)"
+# tm_tunes="#[fg=$tm_color_music] #(osascript ~/.dotfiles/applescripts/tunes.scpt | cut -c 1-50)"
+# tm_battery="#(~/.dotfiles/bin/battery_indicator.sh)"
+tm_tunes="#[bg=colour19,fg=colour12]#(osascript ~/.dotfiles/applescripts/music-info)"
+tm_battery="#[fg=colour12,bg=colour19] ♥ #(~/.dotfiles/bin/battery)"
+tm_date="#[default,bg=colour19,fg=colour12] %b %e :: %H:%M " 
+set -g status-right "$tm_tunes $tm_battery $tm_date"
+
