@@ -33,6 +33,14 @@ call plug#begin('~/.config/nvim/plugged')
         set mouse=a
     endif
 
+	" Tabs = 4 spaces
+	filetype plugin indent on
+	set tabstop=4
+	" when indenting with > use 4 spaces
+	set shiftwidth=4
+	" On pressing tab, insert 4 spaces
+	set expandtab
+
     " Searching
     " set ignorecase " case insensitive searching
     " set smartcase " case-sensitive if expresson contains a capital letter

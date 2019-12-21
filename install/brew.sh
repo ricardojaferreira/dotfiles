@@ -14,11 +14,14 @@ formulas=(
     fzf
     git
     grep
+	openssl
     highlight
+	icu4c
     neovim
     python
     tmux
     tree
+    telnet
     wget
     vim
     zsh

@@ -10,12 +10,16 @@
 - Top Left: Desktop
 - Bottom Left: Launchpad 
 
+### Keyboard
+#### Shortcuts -> Mission Control
+- Change shortcuts that use Control (^) to use Option instead. The control is used by some shortcuts in iTerm.
+
+#### Modifier Keys
+- Caps Lock send Escape key
+
 ### Trackpad
 - Remove Scroll direction natural
 - SLightly reduce _Tracking speed_
-
-### Sound
-- Play feedback when volume changes
 
 ###  Display & Screen Saver
 - Dark (still) mode
@@ -44,6 +48,7 @@
 
 
 ## Applications
+- [HTTPie}(https://httpie.org/): Make http calls on the browser with some cool supports and highlights
 - [Rectangle](https://github.com/rxhanson/Rectangle): brew cask install rectangle 
 - [Spectacle](https://www.spectacleapp.com/)
     - Shortcuts:
@@ -90,4 +95,15 @@
 		- -t, --theme=THEME_NAME           Specify an alternate color theme to load
 		- -v, --version                    Display version number
 		- -w, --width=COLUMNS              Column width to format for (default terminal width)
+
+## Dotfiles
+
+Clone dotfiles to ~/.dotfiles
+
+Some notes:
+- Run :PlugInstall on Vim to activate extensions
+- Copy .zshrc to the correct folder (the original zshrc is not overrided.)
+
+
+
 
