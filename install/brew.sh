@@ -16,6 +16,7 @@ formulas=(
     grep
 	openssl
     highlight
+    httpie
 	icu4c
     neovim
     python
@@ -26,6 +27,7 @@ formulas=(
     vim
     zsh
 	node
+    pandoc
 )
 
 for formula in "${formulas[@]}"; do

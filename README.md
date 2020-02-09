@@ -77,6 +77,10 @@
 - [Enpass](https://www.enpass.io/): Password manager
 - [NordVPN](https://apps.apple.com/us/app/vpn-by-nordvpn-web-security/id1116599239?mt=12): VPN
 
+## Dev Applications
+- [Chef Cookbook DK](https://downloads.chef.io/chefdk#mac_os_x) : To install kitchen docker::sudo chef gem install --no-user-install kitchen-docker
+
+
 ## Terminal Add Ons
 - [mdless](https://brettterpstra.com/2015/08/21/mdless-better-markdown-in-terminal/): Markdown viewer for terminal
 	- Installation: sudo gem install mdless (needs ruby)

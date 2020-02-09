@@ -114,6 +114,7 @@ eval "$(jenv init -)"
 
 #CUSTOM ALIAS
 alias o="open"
+alias rm="rm -i" # To prevent deletions by mistake
 
 # reload zsh config
 alias reload!='RELOAD=1 source ~/.zshrc'
