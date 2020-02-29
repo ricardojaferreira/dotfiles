@@ -67,8 +67,13 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 #TMUX VARIABLES
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT=false
+# ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOCONNECT=false
+if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]
+then 
+    ZSH_TMUX_AUTOSTART=true
+    ZSH_TMUX_AUTOCONNECT=false
+fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -80,6 +85,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -147,11 +153,6 @@ export LC_ALL=en_US.UTF-8
 # Set Git language to English
 #alias git='LANG=en_US git'
 alias git='LANG=en_GB git'
-
-
-# Add Storm to path
-export PATH="/Users/ferreirar2/.storm/bin:$PATH"
-
 
 ######################
 ### CONFIGURATIONS ###
