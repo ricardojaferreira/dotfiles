@@ -19,7 +19,7 @@ formulas=(
     httpie
 	icu4c
     neovim
-    python
+    pyenv
     tmux
     tree
     telnet
@@ -28,6 +28,7 @@ formulas=(
     zsh
 	node
     pandoc
+    jq
 )
 
 for formula in "${formulas[@]}"; do

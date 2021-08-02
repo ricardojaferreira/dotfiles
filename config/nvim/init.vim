@@ -106,7 +106,28 @@ call plug#begin('~/.config/nvim/plugged')
     " set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
     " \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
     " \,sm:block-blinkwait175-blinkoff150-blinkon175
-	
+
+    "Set colorscheme
+    " Available color schemes availabe on colors subdiretory of vim
+    " /usr/share/vim/vim72/colors (this may vary)
+    " blue.vim
+    " darkblue.vim
+    " default.vim
+    " delek.vim
+    " desert.vim
+    " elflord.vim
+    " evening.vim
+    " koehler.vim
+    " morning.vim
+    " murphy.vim
+    " pablo.vim
+    " peachpuff.vim
+    " ron.vim
+    " shine.vim
+    " slate.vim
+    " torte.vim
+    " zellner.vim
+    colorscheme delek
 
 " }}}
 
@@ -128,8 +149,12 @@ call plug#begin('~/.config/nvim/plugged')
     inoremap <leader>d <ESC><ESC>Vypi
 
     " add quotes to word
-    vnoremap q" di""<ESC>P
-    vnoremap q' di''<ESC>P
+    vnoremap q" s""<ESC>P
+    vnoremap q' s''<ESC>P
+
+    " add parentesis around
+    vnoremap q( s()<ESC>P
+    vnoremap q[ s[]<ESC>P
     
     " Select All
     noremap <leader>a <ESC>ggVG
@@ -413,6 +438,7 @@ call plug#begin('~/.config/nvim/plugged')
 " }}}
 
 " Language-Specific Configuration {{{
+        Plug 'vim-ruby/vim-ruby'
 " }}}
 
 call plug#end()

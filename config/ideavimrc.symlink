@@ -23,6 +23,10 @@ noremap <Leader>P "+p
 vnoremap q" di""<ESC>P
 vnoremap q' di''<ESC>P
 
+" add parentesis around
+vnoremap q( s()<ESC>P
+vnoremap q[ s[]<ESC>P
+
 " Tabs = 4 spaces
 filetype plugin indent on
 set tabstop=4

@@ -9,6 +9,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # alias java11='export JAVA_HOME=$HOME/java/jdk-11.0.5.jdk/Contents/Home'
 # export JAVA_HOME=$HOME/java/jdk-11.0.5.jdk/Contents/Home
 # export PATH=$HOME/java/jdk-11.0.5.jdk/Contents/Home/bin:$PATH
+# export MAVEN_OPTS="-Xms256m -Xmx512m"
+export JAVA_HOME='/Users/ferreirar2/.sdkman/candidates/java/8.0.272.j9-adpt:$PATH'
 
 # default
 # java11
@@ -16,7 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="amuse"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -120,6 +122,17 @@ source $ZSH/oh-my-zsh.sh
 alias o="open"
 alias rm="rm -i" # To prevent deletions by mistake
 
+# open intelij projects
+alias i="/Users/ferreirar2/Library/Application\ Support/JetBrains/Toolbox/idea ."
+
+# point to the correct python version in Homebrew
+# alias python="/usr/local/bin/python3"
+# alias pip="/usr/local/bin/pip3"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
 # reload zsh config
 alias reload!='RELOAD=1 source ~/.zshrc'
 
@@ -143,12 +156,15 @@ alias clsym="find -L . -name . -o -type d -prune -o -type l -exec rm {} +"
 #EXPORTS
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export JAVA10_HOME="/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home"
-export JAVA9_HOME="/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home"
-export JAVA8_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home"
+# export JAVA10_HOME="/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home"
+# export JAVA9_HOME="/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home"
+# export JAVA8_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export LOGFILENAME="logfileTest.txt"
 export LC_ALL=en_US.UTF-8
+export KOLIBRITOOLS_HOME="/Users/ferreirar2/Projects/kolibri-tools"
+export KOLIBRITOOLS="$KOLIBRITOOLS_HOME/bin"
+export PATH="$KOLIBRITOOLS:$PATH"
 
 # Set Git language to English
 #alias git='LANG=en_US git'
