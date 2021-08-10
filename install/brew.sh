@@ -14,10 +14,10 @@ formulas=(
     fzf
     git
     grep
-	openssl
+    openssl
     highlight
     httpie
-	icu4c
+    icu4c
     neovim
     pyenv
     tmux
@@ -26,7 +26,7 @@ formulas=(
     wget
     vim
     zsh
-	node
+    node
     pandoc
     jq
 )
